@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于白雀 - 白雀の小屋</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="myself.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+        <!-- 加载动画 -->
+<div class="loading-overlay">
+    <div class="loading-content">
+        <img src="8que.png" class="loading-logo" alt="加载中">
+        <div class="loading-text">正在进入白雀の小屋</div> <!-- 默认文字 -->
+    </div>
+</div>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="8que.png" alt="白雀の小屋" class="logo-img">
+                <span class="logo-text">白雀の小屋</span>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>主页</span>
+                </a>
+                <a href="blog.html" class="nav-item">
+                    <i class="fas fa-book"></i>
+                    <span>博客</span>
+                </a>
+                <a href="myself.html" class="nav-item active">
+                    <i class="fas fa-user"></i>
+                    <span>关于我</span>
+                </a>
+                <a href="recommend.html" class="nav-item">
+                    <i class="fas fa-star"></i>
+                    <span>推荐</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+
+    <main class="container">
+        <!-- 个人名片部分 -->
+        <section class="profile-card" id="profile">
+            <div class="card-content">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="8que.png" alt="白雀的头像">
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="profile-name">白雀</h1>
+                        <p class="profile-bio">「什么都不会的屑白雀」</p>
+                        <div class="profile-tags">
+                            <span class="tag">#音游玩家</span>
+                            <span class="tag">#大三</span>
+                            <span class="tag">#AIGC</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">7</span>
+                        <span class="stat-label">ASMR经验</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">4</span>
+                        <span class="stat-label">我的项目</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">91%</span>
+                        <span class="stat-label">Arcaea技能</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interests-section" id="interests">
+            <h2>爱好与小怪癖</h2>
+            <div class="interests-grid">
+                <div class="interest-item">
+                    <i class="fas fa-gamepad"></i>
+                    <span>音乐游戏</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-robot"></i>
+                    <span>AIGC</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-headphones"></i>
+                    <span>喜欢听ASMR睡觉（7年啦）</span>
+                </div>
+            </div>
+
+            <div class="value-statement">
+                <h3>价值观</h3>
+                <p>相信技术应该服务于人，而非制造焦虑</p>
+            </div>
+        </section>
+
+        <section class="skills-section" id="skills">
+            <h2 class="section-title">🛠 技能树</h2>
+            <div class="skills-container">
+                <div class="skills-grid">
+                    <!-- 技能条 -->
+                    <div class="skill-card" data-skill="PR">
+                        <div class="skill-header">
+                            <i class="fas fa-video"></i>
+                            <span>PR</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 68%; background: linear-gradient(90deg, #FF6B6B, #FF8E8E);">
+                                    <span class="skill-percentage">68%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="PS">
+                        <div class="skill-header">
+                            <i class="fas fa-magic"></i>
+                            <span>PS</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 57%; background: linear-gradient(90deg, #4ECDC4, #45B7D1);">
+                                    <span class="skill-percentage">57%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="HTML">
+                        <div class="skill-header">
+                            <i class="fas fa-code"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 43%; background: linear-gradient(90deg, #96CEB4, #FFEEAD);">
+                                    <span class="skill-percentage">43%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="AIGC">
+                        <div class="skill-header">
+                            <i class="fas fa-robot"></i>
+                            <span>AIGC</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 38%; background: linear-gradient(90deg, #45B7D1, #7FB7D5);">
+                                    <span class="skill-percentage">38%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="RPG">
+                        <div class="skill-header">
+                            <i class="fas fa-gamepad"></i>
+                            <span>RPG Maker</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 72%; background: linear-gradient(90deg, #FF9F9F, #FFC3A0);">
+                                    <span class="skill-percentage">72%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 音游能力展示 -->
+                <div class="rhythm-games-section" id="rhythm-games">
+                    <h2>🎮 音游能力</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="Arcaea">
+                            <div class="skill-header">
+                                <i class="fas fa-music"></i>
+                                <span>Arcaea</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 91%; background: linear-gradient(90deg, #FF6B6B, #FF8E8E);">
+                                        <span class="skill-percentage">91%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card" data-skill="Phigros">
+                            <div class="skill-header">
+                                <i class="fas fa-compact-disc"></i>
+                                <span>Phigros</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%; background: linear-gradient(90deg, #4ECDC4, #45B7D1);">
+                                        <span class="skill-percentage">88%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+        <section class="games-section" id="games">
+            <h2>🎮 当前次元裂缝</h2>
+            <div class="games-list">
+                <span class="game-tag">ARCAEA</span>
+                <span class="game-tag">Phigros</span>
+                <span class="game-tag">永劫无间</span>
+                <span class="game-tag">我的世界</span>
+            </div>
+        </section>
+
+        <section class="music-preference-section" id="music">
+            <h2>🎵 音乐喜好</h2>
+            <div class="pie-chart-container">
+                <div class="pie-chart">
+                    <svg class="pie" viewBox="0 0 100 100">
+                        <circle class="pie-segment" r="25" cx="50" cy="50" 
+                            style="--percentage: 30; --color: #FF6B6B; --start: 0;"/>
+                        <circle class="pie-segment" r="25" cx="50" cy="50"
+                            style="--percentage: 18; --color: #4ECDC4; --start: 108;"/>
+                        <circle class="pie-segment" r="25" cx="50" cy="50"
+                            style="--percentage: 22; --color: #45B7D1; --start: 172.8;"/>
+                        <circle class="pie-segment" r="25" cx="50" cy="50"
+                            style="--percentage: 15; --color: #96CEB4; --start: 252;"/>
+                        <circle class="pie-segment" r="25" cx="50" cy="50"
+                            style="--percentage: 12; --color: #FFBE0B; --start: 306;"/>
+                        <circle class="pie-segment" r="25" cx="50" cy="50"
+                            style="--percentage: 3; --color: #FF9F9F; --start: 349.2;"/>
+                    </svg>
+                    <div class="pie-labels">
+                        <div class="pie-label" style="--angle: 54deg">
+                            <span class="label-text">电子音乐 30%</span>
+                        </div>
+                        <div class="pie-label" style="--angle: 140.4deg">
+                            <span class="label-text">游戏OST 18%</span>
+                        </div>
+                        <div class="pie-label" style="--angle: 212.4deg">
+                            <span class="label-text">术曲 22%</span>
+                        </div>
+                        <div class="pie-label" style="--angle: 279deg">
+                            <span class="label-text">华语流行 3%</span>
+                        </div>
+                        <div class="pie-label" style="--angle: 327.6deg">
+                            <span class="label-text">电子音乐 30%</span>
+                        </div>
+                        <div class="pie-label" style="--angle: 355.6deg">
+                            <span class="label-text">华语流行 3%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section" id="projects">
+            <h2>🚧 项目档案馆</h2>
+            <p class="project-motto">「开工时雄心壮志，更新时人间蒸发」</p>
+            <div class="projects-grid">
+                <a href="https://8que.top/EatGuo/" class="project-card completed">
+                    <h3>吃掉小果儿</h3>
+                    <p class="project-desc">基于"吃掉小鹿乃"的改编版本，加入了自定义难度、排行榜等特色功能。</p>
+                    <div class="project-meta">
+                        <span class="status">已完结</span>
+                        <span class="tech-stack">HTML / JS / PHP</span>
+                    </div>
+                </a>
+                <a href="https://8que.top/guizhou/" class="project-card abandoned">
+                    <h3>多彩贵州</h3>
+                    <p class="project-desc">展示贵州特色文化的互动网站，包含民族文化、美食、景点等内容展示。</p>
+                    <div class="project-meta">
+                        <span class="status">已烂尾</span>
+                        <span class="tech-stack">Vue / Express</span>
+                    </div>
+                </a>
+                <a href="https://8que.top/more-search/" class="project-card ongoing">
+                    <h3>多站同搜</h3>
+                    <p class="project-desc">一键在多个平台同时搜索，支持B站、知乎、微博等主流平台的聚合搜索。</p>
+                    <div class="project-meta">
+                        <span class="status">完善中</span>
+                        <span class="tech-stack">React / Node.js</span>
+                    </div>
+                </a>
+                <a href="https://8que.top/guo/" class="project-card ongoing">
+                    <h3>果儿の茶话会</h3>
+                    <p class="project-desc">个人博客系统，支持Markdown写作，集成了评论、统计等功能。</p>
+                    <div class="project-meta">
+                        <span class="status">完善中</span>
+                        <span class="tech-stack">Next.js / MongoDB</span>
+                    </div>
+                </a>
+            </div>
+
+            <h3>新企划</h3>
+            <div class="new-project">
+                <h3>RPG像素游戏「爱丽丝的诅咒」</h3>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 9%"></div>
+                    </div>
+                    <span class="progress-text">RPG制作进度 9%</span>
+                </div>
+            </div>
+            <div class="new-project">
+                <h3>音游最前沿-查询网站</h3>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text">进度新建文件夹</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-section" id="social">
+            <h2>主要社交平台</h2>
+            <div class="social-links">
+                <a href="https://space.bilibili.com/233995567" class="social-link bilibili">
+                    <i class="fab fa-bilibili"></i>
+                    <span>Bilibili</span>
+                </a>
+                <a href="https://www.douyin.com/user/MS4wLjABAAAAvAUZy0UsIxmForBmtUZAhwZ03Q_sw_JZhWJz51jHA_iCh3vDc2ldyaKHy219ylzY" class="social-link douyin">
+                    <i class="fab fa-tiktok"></i>
+                    <span>抖音</span>
+                </a>
+                <a href="mailto:bqaiueeee@Gmail.com" class="social-link email">
+                    <i class="fas fa-envelope"></i>
+                    <span>Gmail</span>
+                </a>
+                <a href="https://github.com/8que" class="social-link github">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+    <!-- 在main标签后添加 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© 2024 白雀の小屋 All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="https://beian.miit.gov.cn/" class="footer-link" target="_blank">备案号：xxx</a>
+                <span>|</span>
+                <a href="/privacy" class="footer-link">隐私政策</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 在main标签内的最后添加导航目录 -->
+    <aside class="toc-container">
+        <div class="toc-content">
+            <div class="toc-header">
+                <h3 class="toc-title">目录</h3>
+                <div class="reading-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="scrollProgress"></div>
+                    </div>
+                    <span class="progress-number" id="progressNumber">0%</span>
+                </div>
+            </div>
+            <div class="toc-list">
+                <a href="#profile" class="toc-item">个人名片</a>
+                <a href="#interests" class="toc-item">爱好与特点</a>
+                <a href="#skills" class="toc-item">技能树</a>
+                <a href="#rhythm-games" class="toc-item">音游能力</a>
+                <a href="#games" class="toc-item">当前次元裂缝</a>
+                <a href="#music" class="toc-item">音乐喜好</a>
+                <a href="#projects" class="toc-item">项目档案馆</a>
+                <a href="#social" class="toc-item">社交平台</a>
+            </div>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+    <script src="loding.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js"></script>
+</body>
+</html>

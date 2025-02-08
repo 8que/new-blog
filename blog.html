@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白雀の小屋</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+        <!-- 加载动画 -->
+<div class="loading-overlay">
+    <div class="loading-content">
+        <img src="8que.png" class="loading-logo" alt="加载中">
+        <div class="loading-text">正在进入白雀の小屋</div> <!-- 默认文字 -->
+    </div>
+</div>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="8que.png" alt="白雀の小屋" class="logo-img">
+                <span class="logo-text">白雀の小屋</span>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>主页</span>
+                </a>
+                <a href="blog.html" class="nav-item active">
+                    <i class="fas fa-pen-nib"></i>
+                    <span>文章总览</span>
+                </a>
+                <a href="tags.html" class="nav-item">
+                    <i class="fas fa-tags"></i>
+                    <span>标签</span>
+                </a>
+                <a href="myself.html" class="nav-item">
+                    <i class="fas fa-user-circle"></i>
+                    <span>关于我</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    
+    <main class="main-content">
+        <div class="content-wrapper">
+            <!-- 左侧文章列表 -->
+            <div class="articles-container">
+                <a href="w1.html">
+                <div class="article-card">
+                    <div class="article-cover">
+                        <img src="http://8que.top/images/guizhou/xywfl.jpg" alt="贵州介绍">
+                    </div>
+                    <div class="article-info">
+                        <h2 class="article-title">很高兴向你介绍一下我的家乡——贵州</h2>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 2024-08-13</span>
+                            <span><i class="far fa-folder"></i> 旅行</span>
+                        </div>
+                        <p class="article-excerpt">很高兴向你介绍一下我的家乡——贵州，这个网站是练习前端的产物啦，后续会慢慢完善及丰富内容的...</p>
+                    </div>
+                </div>
+                </a>
+                
+                <!-- 更多文章卡片 -->
+                <div class="article-card">
+                    <div class="article-cover">
+                        <img src="http://8que.top/images/arcgis.png" alt="ArcGis安装指南">
+                    </div>
+                    <div class="article-info">
+                        <h2 class="article-title">ArcGis 10.8 安装指南</h2>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 2023-08-30</span>
+                            <span><i class="far fa-folder"></i> 教程</span>
+                        </div>
+                        <p class="article-excerpt">ArcGis 10.8安装教程，详细的安装步骤说明...</p>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-cover">
+                        <img src="http://8que.top/images/meow5.png.jpg" alt="果儿喵">
+                    </div>
+                    <div class="article-info">
+                        <h2 class="article-title">介绍一下自家孩子 果儿 喵！</h2>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 2024-08-13</span>
+                            <span><i class="far fa-folder"></i> 日常</span>
+                        </div>
+                        <p class="article-excerpt">介绍一下自家傻乎乎的孩子 果儿 喵！ 人设和背景故事当然写了些的啦，就是不够妥当，完善了再发出来吧（挖坑） 以后有钱钱了会请厉害的画师妈咪把果儿打扮地漂漂亮亮的 【AI画图】 采样:DPM++...</p>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-cover">
+                        <img src="http://8que.top/images/blog.png" alt="初次建站，你好">
+                    </div>
+                    <div class="article-info">
+                        <h2 class="article-title">初次建站，你好</h2>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 2023-07-23</span>
+                            <span><i class="far fa-folder"></i> 日常</span>
+                        </div>
+                        <p class="article-excerpt">这是小站第一篇短文。 一点编程经验都没有，硬要说经验倒是之前部署过QQbot什么的熟悉了终端这些怎么用，小站搭建全程老老实实跟着教程走，一步一脚印下来一大堆报错，看不懂的日志就百度或问claude，虽说给了一...</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧个人资料卡 -->
+            <aside class="sidebar">
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <img src="https://avatars.githubusercontent.com/u/129237146?v=4" alt="白雀喵">
+                    </div>
+                    <h3 class="profile-name">白雀喵</h3>
+                    <p class="profile-bio">欲买桂花同载酒，终不似，少年游。</p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">6</span>
+                            <span class="stat-label">文章</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">0</span>
+                            <span class="stat-label">标签</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">0</span>
+                            <span class="stat-label">分类</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/8que" class="github-btn" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>Follow Me</span>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://8que.top" class="github-btn" target="_blank">
+                            <img src="https://www.google.com/s2/favicons?domain=8que.top&sz=64" alt="">
+                            <span>访问旧版</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 公告栏卡片 -->
+                <div class="announcement-card">
+                    <h3 class="announcement-title">公告</h3>
+                    <div class="announcement-content">
+                        <p>欢迎来到白雀の小屋！ 喵喵喵</p>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+
+                    </div>
+                </div>
+
+                <!-- 网站资讯卡片 -->
+                <div class="site-info-card">
+                    <h3 class="card-title">网站资讯</h3>
+                    <ul class="site-stats">
+                        <li><i class="fas fa-file-alt"></i> 文章数目：6</li>
+                        <li><i class="fas fa-clock"></i> 已运行时间：180天</li>
+                        <li><i class="fas fa-font"></i> 本站总字数：2.3k</li>
+                        <li><i class="fas fa-eye"></i> 本站总访问量：1234</li>
+                    </ul>
+                </div>
+
+                
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© 2024 白雀の小屋 All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="https://beian.miit.gov.cn/" class="footer-link" target="_blank">备案号：xxx</a>
+                <span>|</span>
+                <a href="/privacy" class="footer-link">隐私政策</a>
+            </div>
+        </div>
+    </footer>
+    <script src="loding.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js"></script>
+</body>
+</html> 

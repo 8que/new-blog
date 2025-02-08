@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白雀の小屋</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="welcome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 加载动画 -->
+<div class="loading-overlay">
+    <div class="loading-content">
+        <img src="8que.png" class="loading-logo" alt="加载中">
+        <div class="loading-text">正在进入白雀の小屋</div> <!-- 默认文字 -->
+    </div>
+</div>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="8que.png" alt="白雀の小屋" class="logo-img">
+                <span class="logo-text">白雀の小屋</span>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>主页</span>
+                </a>
+                <a href="blog.html" class="nav-item">
+                    <i class="fas fa-book"></i>
+                    <span>博客</span>
+                </a>
+                <a href="myself.html" class="nav-item">
+                    <i class="fas fa-user"></i>
+                    <span>关于我</span>
+                </a>
+                <a href="recommend.html" class="nav-item">
+                    <i class="fas fa-star"></i>
+                    <span>推荐</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="home-container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <div class="avatar-container">
+                    <img src="8que.png" alt="白雀" class="avatar">
+                </div>
+                <h1 class="site-title">白雀の小屋</h1>
+                <div class="typed-text" id="typed-text"></div>
+                <div class="site-stats">
+                    <div class="stat-item">
+                        <span class="stat-count">6</span>
+                        <span class="stat-label">文章</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-count">0</span>
+                        <span class="stat-label">标签</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-count">0</span>
+                        <span class="stat-label">分类</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-grid">
+                <div class="grid-item">
+                    <h2><i class="fas fa-book"></i> 最新文章</h2>
+                    <div class="article-list">
+                        <!-- 文章列表 -->
+                        <a href="#" class="article-item">
+                            <span class="article-title">华为云白嫖一年香港服务器，亲测有效</span>
+                            <span class="article-date">2024-11-21</span>
+                        </a>
+                        <a href="#" class="article-item">
+                            <span class="article-title">轻量应用服务器：云端入门到最佳实践</span>
+                            <span class="article-date">2024-11-13</span>
+                        </a>
+                        <!-- 更多文章... -->
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <h2><i class="fas fa-gamepad"></i> 热门游戏</h2>
+                    <div class="game-grid">
+                        <!-- 游戏卡片 -->
+                        <a href="#" class="game-card">
+                            <img src="game1.jpg" alt="游戏1">
+                            <span class="game-title">Kill the King</span>
+                        </a>
+                        <!-- 更多游戏... -->
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <h2><i class="fas fa-tools"></i> 实用工具</h2>
+                    <div class="tool-list">
+                        <!-- 工具列表 -->
+                        <a href="#" class="tool-item">
+                            <i class="fas fa-search"></i>
+                            <span>聚合搜索</span>
+                        </a>
+                        <!-- 更多工具... -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+        <!-- 在main标签后添加 -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">© 2024 白雀の小屋 All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="https://beian.miit.gov.cn/" class="footer-link" target="_blank">备案号：xxx</a>
+                    <span>|</span>
+                    <a href="/privacy" class="footer-link">隐私政策</a>
+                </div>
+            </div>
+        </footer>
+    <script>
+        // 打字效果
+        const texts = [
+            "用技术传递温暖",
+            "分享生活，记录成长",
+            "热爱编程，热爱生活",
+            "欢迎来到我的小屋"
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typedElement = document.getElementById("typed-text");
+
+        function type() {
+            const currentText = texts[textIndex];
+            if (isDeleting) {
+                typedElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typedElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentText.length) {
+                setTimeout(() => isDeleting = true, 1500);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+            }
+
+            const typingSpeed = isDeleting ? 100 : 200;
+            setTimeout(type, typingSpeed);
+        }
+
+        // 启动打字效果
+        setTimeout(type, 1000);
+    </script>
+<script src="loding.js"></script>
+</body>
+</html> 

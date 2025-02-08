@@ -1,0 +1,1300 @@
+/* 全局背景样式 */
+body {
+    background: url('1.jpg') center/cover fixed;
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 深色遮罩 */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.profile-page {
+    min-height: 100vh;
+}
+
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.profile-header {
+    margin-bottom: 3rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.back-link:hover {
+    background: var(--card-bg);
+    transform: translateX(-5px);
+}
+
+.profile-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.personality-type {
+    margin-bottom: 3rem;
+}
+
+.mbti {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.description {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.interest-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.interest-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.value-statement {
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin: 2rem 0;
+}
+
+.games-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.game-tag {
+    padding: 0.5rem 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.game-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.project-motto {
+    font-style: italic;
+    opacity: 0.8;
+    margin: 1rem 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.8rem;
+    background: var(--card-bg);
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.project-desc {
+    flex: 1;
+    margin: 1rem 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.tech-stack {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    padding: 0.4rem 0.8rem;
+    background: var(--background-color);
+    border-radius: 6px;
+}
+
+.status {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.completed .status {
+    background: #10B981;
+    color: white;
+}
+
+.abandoned .status {
+    background: #EF4444;
+    color: white;
+}
+
+.ongoing .status {
+    background: #F59E0B;
+    color: white;
+}
+
+.new-project {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.progress-container {
+    margin-top: 1.5rem;
+}
+
+.progress-bar {
+    height: 12px;
+    background: var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 6px;
+    transition: width 1.5s ease-out;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.social-section {
+    margin-top: 3rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.social-link i {
+    font-size: 1.5rem;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.social-link.bilibili:hover {
+    color: #00a1d6;
+}
+
+.social-link.douyin:hover {
+    color: #fe2c55;
+}
+
+.social-link.email:hover {
+    color: #ea4335;
+}
+
+.social-link.github:hover {
+    color: #333;
+}
+
+/* 技能展示部分样式 */
+.skills-section {
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 16px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.skill-header i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.skill-bar {
+    height: 12px;
+    background: var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-progress {
+    height: 100%;
+    border-radius: 6px;
+    position: relative;
+    transform-origin: left;
+    animation: skillProgress 1.5s ease-out forwards;
+}
+
+.skill-percentage {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* 音游能力部分采用技能树样式 */
+.rhythm-games-section {
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 16px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* 音乐喜好新样式 */
+.music-chart-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.donut-chart-wrapper {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.donut-chart {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    background: var(--card-bg);
+}
+
+.donut-segment {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    clip: rect(0, 150px, 300px, 0);
+    transform: rotate(var(--rotation));
+    transition: transform 1s ease-in-out;
+}
+
+.donut-segment::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    clip: rect(0, 150px, 300px, 0);
+    background: var(--color);
+    transform: rotate(calc(3.6deg * var(--percentage)));
+}
+
+.music-stats {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.stat-item {
+    opacity: 0;
+    animation: fadeInRight 0.5s ease-out forwards;
+}
+
+.stat-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.stat-bar {
+    height: 30px;
+    background: var(--card-bg);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-fill {
+    height: 100%;
+    background: var(--color, #ccc);
+    border-radius: 15px;
+    transition: width 1s ease-out;
+}
+
+.stat-value {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* 动画延迟 */
+.stat-item:nth-child(1) { animation-delay: 0.1s; }
+.stat-item:nth-child(2) { animation-delay: 0.2s; }
+.stat-item:nth-child(3) { animation-delay: 0.3s; }
+.stat-item:nth-child(4) { animation-delay: 0.4s; }
+.stat-item:nth-child(5) { animation-delay: 0.5s; }
+.stat-item:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .music-chart-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .donut-chart-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+
+    .music-stats {
+        width: 100%;
+    }
+}
+
+/* 添加section间距 */
+.profile-content > section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2.5rem;
+}
+
+/* 移除嵌套的卡片样式 */
+.profile-content > section .skill-card,
+.profile-content > section .project-card {
+    background: var(--background-color);
+}
+
+/* 音乐喜好饼图新样式 */
+.pie-chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.pie-chart {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.pie {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.pie-segment {
+    fill: none;
+    stroke-width: 50;
+    stroke-dasharray: calc(var(--percentage) * 157.08 / 100) 157.08;
+    stroke: var(--color);
+    transform: rotate(calc(var(--start) * 1deg));
+    transform-origin: center;
+    transition: all 0.3s ease;
+}
+
+.pie-labels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pie-label {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0 0;
+    transform: rotate(var(--angle)) translate(140px);
+}
+
+.label-text {
+    transform: rotate(calc(-1 * var(--angle)));
+    display: inline-block;
+    padding: 4px 8px;
+    background: var(--card-bg);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .profile-content > section {
+        padding: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .pie-chart {
+        width: 200px;
+        height: 200px;
+    }
+
+    .pie-label {
+        transform: rotate(var(--angle)) translate(110px);
+    }
+
+    .label-text {
+        font-size: 0.8rem;
+    }
+}
+/* 导航栏样式 */
+.site-header {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+/* 主容器样式 */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+/* 个人名片样式 */
+.profile-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 添加背景图片 */
+.profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+                url('1.jpg') center/cover;
+    z-index: 0;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+}
+
+.profile-header {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-top: 120px; /* 为背景图留出空间 */
+}
+
+/* 调整头像样式 */
+.profile-avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 调整文字颜色，使其在背景图上清晰可见 */
+.profile-name {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+    color: #fff;
+}
+
+.profile-bio {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+}
+
+/* 修改统计数字样式 */
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+    border-right: 1px solid #eee;
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4a90e2;
+    margin-bottom: 0.5rem;
+    font-family: 'DIN Alternate', sans-serif;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* 标签样式优化 */
+.profile-tags {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #333;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-tags {
+        justify-content: center;
+    }
+
+    .profile-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .stat-item {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding: 0.8rem;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-value {
+        font-size: 1.8rem;
+    }
+}
+
+/* 动画效果 */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.profile-card {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 5px;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .profile-card {
+        animation: none;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .skill-card, .project-card {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+}
+
+/* 整体页面卡片样式优化 */
+.interests-section,
+.skills-section,
+.rhythm-games-section,
+.games-section,
+.music-preference-section,
+.projects-section,
+.social-section {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 卡片hover效果 */
+.interests-section:hover,
+.skills-section:hover,
+.rhythm-games-section:hover,
+.games-section:hover,
+.music-preference-section:hover,
+.projects-section:hover,
+.social-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* 统一标题样式 */
+section h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #4a90e2, #63b3ed);
+    border-radius: 3px;
+}
+
+/* 右侧导航目录样式 */
+.toc-container {
+    position: fixed;
+    top: 100px;
+    right: calc((100vw - 1000px) / 2 - 280px);
+    width: 250px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.toc-content {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+}
+
+.toc-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.toc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.toc-item {
+    display: block;
+    color: #666;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.toc-item:hover {
+    background: #f5f7fa;
+    color: #4a90e2;
+    transform: translateX(5px);
+}
+
+.toc-item.active {
+    background: #4a90e2;
+    color: white;
+}
+
+/* 响应式布局调整 */
+@media (max-width: 1600px) {
+    .container {
+        margin: 2rem auto;
+    }
+    
+    .toc-container {
+        right: 20px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .container {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 90%;
+    }
+    
+    .toc-container {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* 卡片样式 */
+.profile-card,
+.interests-section,
+.skills-section,
+.rhythm-games-section,
+.games-section,
+.music-preference-section,
+.projects-section,
+.social-section,
+.toc-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 文字颜色调整 */
+section h2, .profile-bio, .stat-label, p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* 统计数字样式 */
+.stat-value {
+    color: #4a90e2;
+}
+
+/* 目录样式 */
+.toc-content {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.toc-title {
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toc-item {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.toc-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #4a90e2;
+}
+
+.toc-item.active {
+    background: rgba(74, 144, 226, 0.3);
+    color: #4a90e2;
+}
+
+/* 技能条样式 */
+.skill-card {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.skill-header {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* 项目卡片样式 */
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.project-desc {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* 标签样式 */
+.tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 移除旧的背景和颜色样式 */
+.profile-page {
+    min-height: 100vh;
+}
+
+/* 统一卡片样式 */
+.profile-card,
+.interests-section,
+.skills-section,
+.rhythm-games-section,
+.games-section,
+.music-preference-section,
+.projects-section,
+.social-section,
+.toc-content,
+.interest-item,
+.game-tag,
+.value-statement,
+.skill-card,
+.project-card,
+.new-project,
+.social-link {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 文字颜色统一调整 */
+h1, h2, h3, p, 
+.profile-bio, 
+.stat-label, 
+.interest-item,
+.value-statement,
+.game-tag,
+.project-motto,
+.project-desc,
+.project-meta,
+.skill-header,
+.skill-percentage,
+.progress-text {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* 特殊文字颜色 */
+.stat-value {
+    color: #4a90e2;
+}
+
+.status {
+    color: #4a90e2;
+}
+
+/* 饼图标签样式 */
+.label-text {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+/* hover效果统一 */
+.interest-item:hover,
+.game-tag:hover,
+.project-card:hover,
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+/* 标签样式 */
+.tag,
+.game-tag,
+.tech-stack {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+/* 目录样式优化 */
+.toc-content {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.toc-title {
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toc-item {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.toc-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #4a90e2;
+}
+
+.toc-item.active {
+    background: rgba(74, 144, 226, 0.3);
+    color: #4a90e2;
+}
+
+/* 技能条样式优化 */
+.skill-bar {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 项目状态标签 */
+.status {
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    background: rgba(74, 144, 226, 0.2);
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(74, 144, 226, 0.5);
+    border-radius: 4px;
+}
+
+/* 移除旧的白色背景和边框 */
+.profile-stats {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+}
+
+.stat-item {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 移除section标题的渐变背景 */
+section h2 {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+section h2::after {
+    background: #4a90e2;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .stat-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* 新项目进度条样式 */
+.new-project .progress-container {
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 1rem;
+    backdrop-filter: blur(5px);
+}
+
+.new-project .progress-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.new-project .progress {
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(90deg, #4a90e2, #63b3ed);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.new-project .progress-text {
+    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-project .progress-text::after {
+    content: "9%";
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+/* 阅读进度条样式 */
+.reading-progress {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.reading-progress .progress-bar {
+    flex: 1;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0;
+    background: #4a90e2;
+    transition: width 0.3s ease;
+}
+
+.progress-number {
+    min-width: 3rem;
+    text-align: right;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+} 

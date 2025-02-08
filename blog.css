@@ -1,0 +1,557 @@
+/* 主内容区布局 */
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+}
+
+/* 文章列表样式 */
+.articles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* 文章卡片样式修复和增强 */
+.article-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.article-cover {
+    flex: 0 0 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.article-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.article-card:hover .article-cover img {
+    transform: scale(1.08);
+}
+
+.article-info {
+    flex: 1;
+}
+
+.article-title {
+    font-size: 1.25rem;
+    margin: 0 0 1rem;
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+.article-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: width 0.3s ease;
+}
+
+.article-title:hover::after {
+    width: 100%;
+}
+
+.article-meta {
+    display: flex;
+    gap: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.article-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.article-excerpt {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.8s ease;
+}
+
+.profile-avatar:hover {
+    transform: rotate(360deg);
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem;
+    color: white;
+}
+
+.profile-bio {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    margin: 0 0 1rem;
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.stat-item:hover .stat-value {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* 网站资讯卡片 */
+.site-info-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+    color: white;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.site-stats {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-stats li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+.site-stats i {
+    color: white;
+}
+
+/* 网站资讯图标动画 */
+.site-stats li i {
+    transition: transform 0.3s ease;
+}
+
+.site-stats li:hover i {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .article-card,
+    .article-card:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .article-cover {
+        flex: none;
+        width: 100%;
+    }
+    
+    .profile-card {
+        order: -1;
+    }
+}
+
+/* 导航栏样式修复 */
+.nav-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-item i {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item span {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* 导航栏当前页面标识优化 */
+.nav-item.active {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.nav-item.active i,
+.nav-item.active span {
+    color: #fff;
+}
+
+/* Follow Me 按钮样式 */
+.social-links {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.github-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.github-btn i {
+    font-size: 1.2rem;
+}
+
+.github-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.github-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* 公告栏卡片样式 */
+.announcement-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.announcement-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+.announcement-title {
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+    color: white;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.announcement-content {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* 公告内容hover效果 */
+.announcement-content p {
+    transition: transform 0.3s ease, padding-left 0.3s ease;
+    padding-left: 0;
+}
+
+.announcement-content p:hover {
+    transform: translateX(5px);
+    padding-left: 5px;
+    color: #fff;
+}
+
+/* 卡片悬浮效果 */
+.profile-card:hover,
+.announcement-card:hover,
+.site-info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* 头像旋转效果 */
+.profile-avatar:hover {
+    transform: rotate(360deg);
+}
+
+/* 文章卡片图片放大效果 */
+.article-cover {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.article-cover img {
+    transition: transform 0.5s ease;
+}
+
+.article-card:hover .article-cover img {
+    transform: scale(1.08);
+}
+
+/* 统计数字动画效果 */
+.stat-value {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.stat-item:hover .stat-value {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* 文章标题悬浮效果 */
+.article-title:hover::after {
+    width: 100%;
+}
+
+/* 增加交互效果 */
+/* 头像旋转效果 */
+.profile-avatar {
+    transition: transform 0.8s ease;
+}
+
+.profile-avatar:hover {
+    transform: rotate(360deg);
+}
+
+/* 文章卡片图片放大效果 */
+.article-cover {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.article-cover img {
+    transition: transform 0.5s ease;
+}
+
+.article-card:hover .article-cover img {
+    transform: scale(1.08);
+}
+
+/* GitHub按钮悬浮效果增强 */
+.github-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.github-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.github-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* 卡片悬浮效果 */
+.profile-card,
+.announcement-card,
+.site-info-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover,
+.announcement-card:hover,
+.site-info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* 统计数字动画效果 */
+.stat-value {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.stat-item:hover .stat-value {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* 公告内容hover效果 */
+.announcement-content p {
+    transition: transform 0.3s ease, padding-left 0.3s ease;
+    padding-left: 0;
+}
+
+.announcement-content p:hover {
+    transform: translateX(5px);
+    padding-left: 5px;
+    color: #fff;
+}
+
+/* 网站资讯图标动画 */
+.site-stats li i {
+    transition: transform 0.3s ease;
+}
+
+.site-stats li:hover i {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* 文章标题悬浮效果 */
+.article-title {
+    position: relative;
+    display: inline-block;
+}
+
+.article-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: width 0.3s ease;
+}
+
+.article-title:hover::after {
+    width: 100%;
+}
+
+/* 导航栏当前页面标识优化 */
+.nav-item.active {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.nav-item.active i,
+.nav-item.active span {
+    color: #fff;
+} 

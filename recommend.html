@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>推荐 - 白雀の小屋</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="recommend.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="8que.png" alt="白雀の小屋" class="logo-img">
+                <span class="logo-text">白雀の小屋</span>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>主页</span>
+                </a>
+                <a href="blog.html" class="nav-item">
+                    <i class="fas fa-book"></i>
+                    <span>博客</span>
+                </a>
+                <a href="myself.html" class="nav-item">
+                    <i class="fas fa-user"></i>
+                    <span>关于我</span>
+                </a>
+                <a href="recommend.html" class="nav-item">
+                    <i class="fas fa-star"></i>
+                    <span>推荐</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 添加侧边栏和主内容区 -->
+    <div class="content-wrapper">
+        <!-- 侧边栏 -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="category-item">
+                    <div class="category-header">
+                        <i class="fas fa-image"></i>
+                        <span>图像处理</span>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-header">
+                        <i class="fas fa-music"></i>
+                        <span>音频处理</span>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-header">
+                        <i class="fas fa-video"></i>
+                        <span>视频处理</span>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-header">
+                        <i class="fas fa-file-alt"></i>
+                        <span>文本处理</span>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-header">
+                        <i class="fas fa-briefcase"></i>
+                        <span>智能办公</span>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <span>其他工具</span>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="main-content" id="mainContent">
+            <div class="tools-grid" id="toolsGrid">
+                <!-- 工具卡片将通过JavaScript动态生成 -->
+            </div>
+        </main>
+    </div>
+
+    <!-- 添加页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© 2024 白雀の小屋 All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="https://beian.miit.gov.cn/" class="footer-link" target="_blank">备案号：xxx</a>
+                <span>|</span>
+                <a href="/privacy" class="footer-link">隐私政策</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="recommend.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js"></script>
+</body>
+</html> 
